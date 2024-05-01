@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Apr 2024 pada 11.11
+-- Waktu pembuatan: 01 Bulan Mei 2024 pada 16.17
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -39,10 +39,7 @@ CREATE TABLE `favorit` (
 --
 
 INSERT INTO `favorit` (`id_favorit`, `id_user`, `id_webtoon`, `waktu_tambah`) VALUES
-(25, 3, 1, '2024-04-08 02:28:02'),
-(26, 3, 2, '2024-04-08 02:28:03'),
-(27, 3, 7, '2024-04-08 02:33:19'),
-(28, 3, 9, '2024-04-08 02:46:23');
+(33, 3, 3, '2024-04-15 22:48:06');
 
 -- --------------------------------------------------------
 
@@ -54,16 +51,19 @@ CREATE TABLE `pengguna` (
   `id_user` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `level` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `pengguna`
 --
 
-INSERT INTO `pengguna` (`id_user`, `username`, `email`, `password`) VALUES
-(1, 'remanda', 'remanda@gmail.com', '12345678'),
-(3, 'dokja', 'kimcom@angst.com', 'cumi');
+INSERT INTO `pengguna` (`id_user`, `username`, `email`, `password`, `level`) VALUES
+(1, 'remanda', 'remanda@gmail.com', '12345678', 'user'),
+(3, 'dokja', 'kimcom@angst.com', 'cumi', 'user'),
+(4, 'webtoonz', 'webtoonz24@gmail.com', 'web22', 'admin'),
+(5, 'manda', 'manda@gmail.com', 'jungkook', 'user');
 
 -- --------------------------------------------------------
 
@@ -127,13 +127,13 @@ ALTER TABLE `webtoon`
 -- AUTO_INCREMENT untuk tabel `favorit`
 --
 ALTER TABLE `favorit`
-  MODIFY `id_favorit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_favorit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `webtoon`
