@@ -6,3 +6,9 @@ Dengan adanya website ini, diharapkan dapat membantu pengguna dalam melihat sert
 Link Hosting
 
 http://webtoonz.lovestoblog.com/
+
+Akun Admin
+
+Email: webtoonz24@gmail.com
+
+Password: web22
